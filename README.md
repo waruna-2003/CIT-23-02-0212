@@ -66,3 +66,38 @@ This project is a Docker-based web application called **People Collector**.
 ### 1. Prepare the application
 ```bash
 ./prepare-app.sh
+```
+Creates the Docker network, named volume, and builds the Flask image.
+
+### 2. Run the application
+```bash
+./start-app.sh
+```
+Starts both containers and prints the URL for access.
+
+### 3. Access the application
+Open a web browser and go to:
+```arduino
+http://localhost:5000
+```
+Enter your name and age, then view them displayed in the table.
+
+### 4. Puse the application
+```bash
+./stop-app.sh
+```
+Stop the container but keeps the data safe.
+
+### 5. Restart the application
+```bash
+./start-app.sh
+```
+Start the containers again. Data is preserved.
+
+### 6. Delete all application resources
+```bash
+./remove-app.sh
+```
+Remove containers, network, volumes, and image.
+
+All stored data will be lost.
