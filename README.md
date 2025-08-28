@@ -4,9 +4,9 @@
 - Operating System: Linux (tested on Ubuntu).  
   Also works on Windows/macOS with Docker Desktop.  
 - Required Software:  
-  - Docker (version 20.10 or higher)  
-  - Docker Compose (optional, not required for this submission)  
-  - Git (optional, for version control)  
+  - Docker  
+  - Docker Compose 
+  - Git   
 - Ports Used:  
   - 5000 → Flask web application  
   - 3306 → MySQL database  
@@ -101,3 +101,32 @@ Start the containers again. Data is preserved.
 Remove containers, network, volumes, and image.
 
 All stored data will be lost.
+
+## Example Workflow
+```bash
+# Create application resources
+./prepare-app.sh
+Preparing app ...
+
+# Run the application
+./start-app.sh
+Running app ...
+The app is available at http://localhost:5000
+
+# Open a web browser and interact with the app
+# Enter names and ages
+
+# Pause the application
+./stop-app.sh
+Stopping app ...
+
+# Restart the application
+./start-app.sh
+Running app ...
+The app is available at http://localhost:5000
+(Data is still available)
+
+# Delete all application resources
+./remove-app.sh
+Removed app.
+```
