@@ -1,3 +1,4 @@
+# CCS3308-Virtualization and Containers_Assignment01
 # CIT-23-02-0212
 
 ## Deployment Requirements
@@ -130,3 +131,12 @@ The app is available at http://localhost:5000
 ./remove-app.sh
 Removed app.
 ```
+
+## Notes
+- If port 5000 or 3306 is already in use, edit 'start-app.sh' and change the host ports.
+- To check logs for troubleshooting:
+```bash
+docker logs my-webapp
+docker logs my-database
+```
+- Data persists until you run 'remove-app.sh', which deletes the volume.
